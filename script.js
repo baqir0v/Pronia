@@ -13,3 +13,17 @@ discountbutton2.addEventListener("click", () => {
     
     discountopen2.classList.toggle("active");
 });
+
+
+let movingimage = document.getElementById("movingimage")
+
+movingimage.addEventListener("click",function(e){
+    const mouseX = e.clientX
+    const mouseY = e.clientY
+
+    const newX = mouseX - movingimage.width/2
+    const newY = mouseY - movingimage.height/2
+    
+    movingimage.style.left =newX + "px",
+    movingimage.style.top =newY + "px"
+})

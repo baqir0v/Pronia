@@ -49,10 +49,36 @@ const productsData = [
     },
 ];
 
-
+const newProducts = [
+    {
+        id: 1,
+        image: "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-9-270x300.jpg",
+        title: "American Marigold",
+        price: 23
+    },
+    {
+        id: 2,
+        image: "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-10-270x300.jpg",
+        title: "Black Eyed Susan",
+        price: 25
+    },
+    {
+        id: 3,
+        image: "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-11-270x300.jpg",
+        title: "Bleeding Heart",
+        price: 30
+    },
+    {
+        id: 4,
+        image: "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-7-270x300.jpg",
+        title: "Bloody Cranesbill",
+        price: 45
+    }
+]
 const flowers = document.getElementById("flowers");
+const newflowers = document.getElementById("newProducts");
 
-productsData.forEach(product => {
+function createProductCard(product) {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.innerHTML = `
@@ -73,6 +99,15 @@ productsData.forEach(product => {
                 <i class="fa-solid fa-star" style="color: #ffe24d;"></i>
             </div>
         </div>`;
+    return productCard;
+}
 
-    flowers.append(productCard);
+productsData.forEach(product => {
+    const productCard = createProductCard(product);
+    flowers.appendChild(productCard);
+});
+
+newProducts.forEach(product => {
+    const productCard = createProductCard(product);
+    newflowers.appendChild(productCard);
 });

@@ -1,3 +1,5 @@
+@import 'responsive';
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +11,7 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 // Discount :start
 #discount {
     width: 100%;
@@ -52,7 +55,7 @@ body {
 
 .discountbuttons:hover {
     cursor: pointer;
-    
+
 }
 
 
@@ -63,6 +66,7 @@ body {
     position: absolute;
     top: 160%;
     z-index: 2;
+    flex-direction: column;
 
     li {
         background-color: white;
@@ -79,16 +83,17 @@ body {
 .discountopen.active {
     display: block;
 }
+
 // Discount :end
 // Navbar :start
 .navbar {
     background-color: white;
     width: 100%;
     height: 20vh;
-    position: sticky;
+    // position: sticky;
     top: 0;
     z-index: 1;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .navtop {
@@ -160,6 +165,9 @@ body {
 
     .fa-users {
         cursor: pointer;
+    }
+    .fa-bars{
+        display: none;
     }
 }
 
@@ -293,6 +301,7 @@ body {
     }
 
 }
+
 // Navbar :end
 // Discover :start
 .discover {
@@ -365,10 +374,7 @@ body {
                 justify-content: center;
                 align-items: center;
 
-                img {
-                    width: 80%;
-                    height: 100%;
-                }
+                
             }
         }
     }
@@ -376,6 +382,7 @@ body {
 
 #movingimage {
     transition: transform 0.3s;
+
 }
 
 
@@ -386,7 +393,7 @@ body {
     height: 25vh;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 
     .shippingbox {
         height: 15vh;
@@ -503,10 +510,10 @@ body {
         max-width: 100%;
         padding-top: 100px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, auto);
+        
         justify-items: center;
         gap: 20px;
+        grid-template-columns: auto auto auto auto;
     }
 
     .product-info {
@@ -821,8 +828,7 @@ body {
     max-width: 100%;
     padding-top: 100px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: auto auto auto auto;
     justify-items: center;
     gap: 20px;
 
@@ -926,12 +932,15 @@ body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        .clientboxes:hover{
+
+        .clientboxes:hover {
             cursor: pointer;
         }
-        .clientboxes:hover .testimonial{
+
+        .clientboxes:hover .testimonial {
             background-color: #525252;
         }
+
         .clientboxes {
             position: relative;
             border: 1px solid black;
@@ -1040,12 +1049,15 @@ body {
         height: 25vh;
         display: flex;
         flex-direction: column;
-        h2{
+
+        h2 {
             font-size: 30px;
         }
-        p{
+
+        p {
             font-size: 20px;
         }
+
         .latesthead {
             margin-left: auto;
             margin-right: auto;
@@ -1089,7 +1101,8 @@ body {
                 position: relative;
                 background-color: #f6f7fb;
                 border-radius: 20px;
-                img{
+
+                img {
                     padding-bottom: 10px;
                 }
 
@@ -1103,14 +1116,17 @@ body {
                         color: #abd373;
                         font-size: 20px;
                     }
-                    li{
+
+                    li {
                         font-size: 20px;
                     }
                 }
-                h2{
+
+                h2 {
                     font-size: 25px;
                 }
-                p{
+
+                p {
                     font-size: 18px;
                 }
 
@@ -1208,14 +1224,17 @@ body {
                 img:hover {
                     cursor: pointer;
                 }
-                h3{
+
+                h3 {
                     font-size: 25px;
                 }
-                a{
+
+                a {
                     font-size: 30px;
                     color: #000;
                 }
-                p{
+
+                p {
                     font-size: 20px;
                 }
 
@@ -1236,22 +1255,25 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                h3{
+
+                h3 {
                     font-size: 25px;
                 }
-                
-                ul{
+
+                ul {
                     height: 60%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
-                    a{
-                    font-size: 20px;
+
+                    a {
+                        font-size: 20px;
                         color: #525252;
                         transition: 0.2s;
 
                     }
-                    a:hover{
+
+                    a:hover {
                         cursor: pointer;
                         color: #ABD373;
                     }
@@ -1301,7 +1323,8 @@ body {
                         justify-content: center;
                         align-items: center;
                     }
-                    div:hover{
+
+                    div:hover {
                         border: none;
                         color: white;
                         background-color: #ABD373;
@@ -1314,3 +1337,129 @@ body {
 }
 
 // Footer :end
+// Sidebar :start
+#sidenavbar {
+    width: 25%;
+    height: 100%;
+    background-color: #333333;
+    position: fixed;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    #exitdiv{
+        position: relative;
+        width: 100%;
+        height: 10%;        
+    }
+    #exit{
+        position: absolute;
+        color: white;
+        top: 0;
+        right: 30px;
+    }
+    #exit:hover{
+        cursor: pointer;
+    }
+    .sidenavbarbox {
+        width: 100%;
+        height: 70%;
+        background-color: #333333;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        gap: 50px;
+
+        .phone {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            div {
+                background-color: #ABD373;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 10px;
+            }
+
+            a {
+                font-size: 25px;
+                background-color: #ABD373;
+                color: white;
+            }
+        }
+
+        .language {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            ul {
+                width: 80%;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                li {
+                    color: white;
+
+                }
+            }
+        }
+
+        .accordions {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+
+
+            .accli {
+                background-color: #333333;
+                padding: 31px 0;
+
+                ul {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 60px;
+                    background-color: #3d3d3d;
+                    color: white;
+                    width: 100%;
+                    display: none;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                a {
+                    color: white;
+                    padding-left: 60px;
+                }
+
+                i {
+                    float: right;
+                    padding-right: 60px;
+                }
+            }
+
+            .accli:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Sidebar :end
+.active {
+    display: flex !important;
+}
+

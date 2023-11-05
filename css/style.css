@@ -1,3 +1,82 @@
+@media screen and (max-width: 1200px) {
+  #movingimage {
+    height: 55%;
+    width: 80%;
+  }
+  .homea2 {
+    display: none;
+  }
+  .brandboxes #img4 {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .discoverbox {
+    flex-direction: column-reverse;
+  }
+  .discoverleft {
+    align-items: center;
+  }
+  .shippingbox {
+    flex-direction: column;
+  }
+  #flowers {
+    grid-template-columns: auto auto auto !important;
+  }
+  .banner {
+    margin-top: 200px;
+  }
+  .bannertop {
+    margin-top: 120px;
+  }
+  #newProducts {
+    grid-template-columns: auto auto !important;
+  }
+  .clientbottom {
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .clientbottom h4 {
+    font-size: 20px !important;
+  }
+  .clientbottom span {
+    font-size: 15px !important;
+  }
+  .clientbottom p {
+    font-size: 15px !important;
+  }
+  .brand {
+    margin-top: 30px;
+  }
+  .brand #img3 {
+    display: none;
+  }
+  #latestbox3 {
+    display: none;
+  }
+  .latestbox {
+    justify-content: space-evenly;
+  }
+  .footertop {
+    flex-direction: column;
+  }
+  #footer {
+    height: auto !important;
+  }
+  .navleft {
+    display: none !important;
+  }
+  .navright .fa-heart {
+    display: none;
+  }
+  .navright .fa-users {
+    display: none;
+  }
+  .navright .fa-bars {
+    display: block !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +140,7 @@ body {
   position: absolute;
   top: 160%;
   z-index: 2;
+  flex-direction: column;
 }
 .discountopen li {
   background-color: white;
@@ -80,10 +160,8 @@ body {
   background-color: white;
   width: 100%;
   height: 20vh;
-  position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .navtop {
@@ -151,6 +229,9 @@ body {
 }
 .navright .fa-users {
   cursor: pointer;
+}
+.navright .fa-bars {
+  display: none;
 }
 
 .navright i {
@@ -313,10 +394,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.discover .discoverbox .discoverright .discoverimg img {
-  width: 80%;
-  height: 100%;
-}
 
 #movingimage {
   transition: transform 0.3s;
@@ -327,7 +404,7 @@ body {
   height: 25vh;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 .shipping .shippingbox {
   height: 15vh;
@@ -423,10 +500,9 @@ body {
   max-width: 100%;
   padding-top: 100px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
   justify-items: center;
   gap: 20px;
+  grid-template-columns: auto auto auto auto;
 }
 .product .product-info {
   text-align: left;
@@ -684,8 +760,7 @@ body {
   max-width: 100%;
   padding-top: 100px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: auto auto auto auto;
   justify-items: center;
   gap: 20px;
 }
@@ -1109,4 +1184,111 @@ body {
   color: white;
   background-color: #ABD373;
   cursor: pointer;
+}
+
+#sidenavbar {
+  width: 25%;
+  height: 100%;
+  background-color: #333333;
+  position: fixed;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#sidenavbar #exitdiv {
+  position: relative;
+  width: 100%;
+  height: 10%;
+}
+#sidenavbar #exit {
+  position: absolute;
+  color: white;
+  top: 0;
+  right: 30px;
+}
+#sidenavbar #exit:hover {
+  cursor: pointer;
+}
+#sidenavbar .sidenavbarbox {
+  width: 100%;
+  height: 70%;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#sidenavbar .sidenavbarbox .phone {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#sidenavbar .sidenavbarbox .phone div {
+  background-color: #ABD373;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+#sidenavbar .sidenavbarbox .phone a {
+  font-size: 25px;
+  background-color: #ABD373;
+  color: white;
+}
+#sidenavbar .sidenavbarbox .language {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sidenavbar .sidenavbarbox .language ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sidenavbar .sidenavbarbox .language ul li {
+  color: white;
+}
+#sidenavbar .sidenavbarbox .accordions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+#sidenavbar .sidenavbarbox .accordions .accli {
+  background-color: #333333;
+  padding: 31px 0;
+}
+#sidenavbar .sidenavbarbox .accordions .accli ul {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  background-color: #3d3d3d;
+  color: white;
+  width: 100%;
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 20px;
+}
+#sidenavbar .sidenavbarbox .accordions .accli a {
+  color: white;
+  padding-left: 60px;
+}
+#sidenavbar .sidenavbarbox .accordions .accli i {
+  float: right;
+  padding-right: 60px;
+}
+#sidenavbar .sidenavbarbox .accordions .accli:hover {
+  cursor: pointer;
+}
+
+.active {
+  display: flex !important;
 }/*# sourceMappingURL=style.css.map */

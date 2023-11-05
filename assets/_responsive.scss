@@ -1,0 +1,93 @@
+@media screen and (max-width: 1200px) {
+
+    #movingimage {
+        height: 55%;
+        width: 80%;
+    }
+
+    .homea2 {
+        display: none;
+    }
+    .brandboxes{
+        #img4{
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .discoverbox {
+        flex-direction: column-reverse;
+    }
+
+    .discoverleft {
+        align-items: center;
+    }
+
+    .shippingbox {
+        flex-direction: column;
+    }
+
+    #flowers {
+        
+        grid-template-columns: auto auto auto !important;
+        
+    }
+    .banner{
+        margin-top: 200px;
+    }
+    .bannertop{
+        margin-top: 120px;
+    }
+    #newProducts{
+        grid-template-columns: auto auto !important;
+    } 
+    .clientbottom{
+        padding-top: 20px;
+        flex-direction: column; 
+        gap: 20px;
+        h4{
+            font-size: 20px !important;
+        }
+        span{
+            font-size: 15px !important;
+        }
+        p{
+            font-size: 15px !important;
+        }
+    }
+    .brand{
+        margin-top: 30px;
+        #img3{
+            display: none;
+        }
+    }
+    #latestbox3{
+        display: none;
+    }
+    .latestbox{
+        justify-content: space-evenly;
+    }
+    .footertop{
+        flex-direction: column;
+    }
+    #footer{
+        height: auto !important;
+    }
+    .navleft{
+        display: none !important;
+    }
+    .navright{
+        .fa-heart{
+            display: none;
+        }
+        .fa-users{
+            display: none;
+        }
+        .fa-bars{
+            display: block !important;
+        }
+    }
+
+}

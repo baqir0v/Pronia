@@ -8,7 +8,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  /* Added a default font for better readability */
 }
 
 #discount {
@@ -22,9 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  /* Center the content horizontally */
   width: 90%;
-  /* Adjusted the width */
   height: 100%;
 }
 
@@ -33,10 +30,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 30%;
-  /* Adjusted the width */
   height: 100%;
   color: white;
-  font-size: 10px;
 }
 
 .discountboxright {
@@ -52,6 +47,7 @@ body {
   border: none;
   color: white;
   height: 100%;
+  font-size: 18px;
 }
 
 .discountbuttons:hover {
@@ -63,7 +59,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   color: black;
   position: absolute;
-  top: 125%;
+  top: 160%;
   z-index: 2;
 }
 .discountopen li {
@@ -71,7 +67,9 @@ body {
 }
 .discountopen li:hover {
   cursor: pointer;
-  background-color: aqua;
+  background-color: #ABD373;
+  color: white;
+  transition: 0.2s;
 }
 
 .discountopen.active {
@@ -81,16 +79,17 @@ body {
 .navbar {
   background-color: white;
   width: 100%;
-  height: 25vh;
+  height: 20vh;
+  position: sticky;
   top: 0;
   z-index: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .navtop {
-  width: 60%;
+  width: 70%;
   height: 70%;
   margin: 0 auto;
-  /* Center the content horizontally */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,9 +115,9 @@ body {
 }
 
 .navleft a {
-  background-color: #abd373;
-  color: white;
+  color: #525252;
   padding: 5px 10px;
+  font-size: 25px;
 }
 
 .navmid {
@@ -129,11 +128,10 @@ body {
 
 .navmid img {
   max-height: 100%;
-  width: 70px;
 }
 
 .navright {
-  width: 100px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,11 +154,20 @@ body {
 }
 
 .navright i {
-  font-size: 15px;
+  color: #525252;
+  font-size: 25px;
 }
 
 .navbottom {
   width: 100%;
+}
+.navbottom .homea {
+  font-size: 25px;
+  color: #525252;
+}
+.navbottom .homea2 {
+  font-size: 25px;
+  color: #525252;
 }
 .navbottom .main-menu-links {
   margin-left: auto;
@@ -201,6 +208,7 @@ body {
 }
 .navbottom .homeSubMenu a {
   color: #525252;
+  font-size: 20px;
 }
 .navbottom .homeSubMenu a:hover {
   color: #abd373;
@@ -211,7 +219,7 @@ body {
 .navbottom .mega-subMenu {
   color: #525252;
   z-index: 1;
-  width: 25vw;
+  width: 30vw;
   position: absolute;
   display: flex;
   justify-content: space-around;
@@ -219,8 +227,14 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   background-color: white;
 }
+.navbottom .mega-subMenu .lines {
+  width: 1px;
+  height: 100%;
+  border: 1px solid black;
+}
 .navbottom .mega-subMenu li a {
   color: #525252;
+  font-size: 20px;
 }
 .navbottom .mega-subMenu a:hover {
   color: #abd373;
@@ -232,7 +246,7 @@ body {
   justify-content: space-between;
 }
 .navbottom .mega-subMenu .submenuh1 {
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .discover {
@@ -261,18 +275,22 @@ body {
   padding-left: 20px;
 }
 .discover .discoverbox .discoverleft span {
-  font-size: 30px;
-}
-.discover .discoverbox .discoverleft h2 {
   font-size: 50px;
 }
+.discover .discoverbox .discoverleft h2 {
+  font-size: 60px;
+}
+.discover .discoverbox .discoverleft p {
+  font-size: 30px;
+}
 .discover .discoverbox .discoverleft button {
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 100px;
   background-color: #abd373;
   border: none;
-  border-radius: 20px;
+  border-radius: 100px;
   color: white;
+  font-size: 30px;
 }
 .discover .discoverbox .discoverleft button:hover {
   cursor: pointer;
@@ -325,7 +343,7 @@ body {
   align-items: center;
 }
 .shipping .shippingbox .shippingboxes .shippinginside {
-  width: 64%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
 }
@@ -377,7 +395,7 @@ body {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 45%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -387,12 +405,13 @@ body {
   color: #abd373;
 }
 .product .ourproducts .productbutton .pbuttons {
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
   border: 1px solid #525252;
   border-radius: 10px;
   background-color: white;
   transition: 0.3s;
+  font-size: 20px;
 }
 .product .ourproducts .productbutton .pbuttons:hover {
   cursor: pointer;
@@ -721,14 +740,12 @@ body {
 .clients {
   width: 100%;
   height: 80vh;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
 .clients .clienttop {
   width: 40%;
   height: 200px;
-  border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -755,5 +772,341 @@ body {
   font-size: 20px;
 }
 .clients .clientbottom {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.clients .clientbottom .clientboxes:hover {
+  cursor: pointer;
+}
+.clients .clientbottom .clientboxes:hover .testimonial {
+  background-color: #525252;
+}
+.clients .clientbottom .clientboxes {
+  position: relative;
   border: 1px solid black;
+  width: 30%;
+  height: 65%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #525252;
+  border-radius: 30px;
+}
+.clients .clientbottom .clientboxes .testimonial {
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 100%;
+  background-color: #abd373;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 125px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients .clientbottom .clientboxes .testimonial .testimonialdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: auto;
+  width: 80%;
+  height: 80%;
+}
+.clients .clientbottom .clientboxes .testimonial img {
+  width: 40%;
+  height: 30%;
+}
+.clients .clientbottom .clientboxes img {
+  width: 80px;
+  height: 80px;
+}
+.clients .clientbottom .clientboxes h4 {
+  font-size: 25px;
+}
+.clients .clientbottom .clientboxes span {
+  font-size: 20px;
+}
+.clients .clientbottom .clientboxes p {
+  font-size: 20px;
+}
+
+.brand {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .brandbox {
+  width: 70%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://htmldemo.net/pronia/pronia/assets/images/brand/bg/1-1170x300.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .brandbox .brandboxes {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.latest {
+  width: 100%;
+  height: 80vh;
+}
+.latest .latesttop {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+}
+.latest .latesttop h2 {
+  font-size: 30px;
+}
+.latest .latesttop p {
+  font-size: 20px;
+}
+.latest .latesttop .latesthead {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.latest .latesttop .latesthead .lines {
+  height: 0px;
+  width: 100%;
+  border: 1px solid #abd373;
+}
+.latest .latesttop .latesttext {
+  text-align: center;
+}
+.latest .latestbottom {
+  width: 100%;
+  height: 55vh;
+}
+.latest .latestbottom .latestbox {
+  width: 80%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.latest .latestbottom .latestbox .latestboxes {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  background-color: #f6f7fb;
+  border-radius: 20px;
+}
+.latest .latestbottom .latestbox .latestboxes img {
+  padding-bottom: 10px;
+}
+.latest .latestbottom .latestbox .latestboxes ul {
+  color: #abd373;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.latest .latestbottom .latestbox .latestboxes ul a {
+  color: #abd373;
+  font-size: 20px;
+}
+.latest .latestbottom .latestbox .latestboxes ul li {
+  font-size: 20px;
+}
+.latest .latestbottom .latestbox .latestboxes h2 {
+  font-size: 25px;
+}
+.latest .latestbottom .latestbox .latestboxes p {
+  font-size: 18px;
+}
+.latest .latestbottom .latestbox .latestboxes .links {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  border-radius: 100%;
+  border: 1px solid #ABD373;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.latest .latestbottom .latestbox .latestboxes .links a {
+  color: #ABD373;
+}
+
+#footer {
+  width: 100%;
+  height: 50vh;
+  background-image: url(https://htmldemo.net/pronia/pronia/assets/images/footer/bg/1-1920x465.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer .footerbottom {
+  padding-top: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#footer .footerbottom .line {
+  width: 80%;
+  border: 1px solid #abd373;
+  height: 0px;
+}
+#footer .footerbottom p {
+  background-color: #ABD373;
+  color: white;
+}
+#footer .footerbottom p a {
+  color: white;
+}
+#footer .footerbottom i {
+  color: red;
+}
+#footer .footertop {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+  width: 80%;
+}
+#footer .footertop .footerright {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .footertop .footerright .rightbox {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#footer .footertop .footerright .rightbox img {
+  width: 200px;
+}
+#footer .footertop .footerright .rightbox img:hover {
+  cursor: pointer;
+}
+#footer .footertop .footerright .rightbox h3 {
+  font-size: 25px;
+}
+#footer .footertop .footerright .rightbox a {
+  font-size: 30px;
+  color: #000;
+}
+#footer .footertop .footerright .rightbox p {
+  font-size: 20px;
+}
+#footer .footertop .footermid {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footertop .footermid .midboxes {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#footer .footertop .footermid .midboxes h3 {
+  font-size: 25px;
+}
+#footer .footertop .footermid .midboxes ul {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#footer .footertop .footermid .midboxes ul a {
+  font-size: 20px;
+  color: #525252;
+  transition: 0.2s;
+}
+#footer .footertop .footermid .midboxes ul a:hover {
+  cursor: pointer;
+  color: #ABD373;
+}
+#footer .footertop .footerleft {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#footer .footertop .footerleft .lefttop {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 20px;
+}
+#footer .footertop .footerleft img {
+  width: 110px;
+  height: 60px;
+}
+#footer .footertop .footerleft .social {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#footer .footertop .footerleft .social .socialboxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .footertop .footerleft .social .socialboxes div {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footertop .footerleft .social .socialboxes div:hover {
+  border: none;
+  color: white;
+  background-color: #ABD373;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

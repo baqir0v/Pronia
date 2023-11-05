@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
 
     #movingimage {
         height: 55%;
@@ -13,6 +13,14 @@
             display: none;
         }
     }
+    .phone a{
+        font-size: 18px !important;
+    }
+    .language li{
+        font-size: 12px !important;
+    }
+
+  
 
 }
 
@@ -88,6 +96,26 @@
         .fa-bars{
             display: block !important;
         }
+    }
+    .accordions {
+        .accli {
+            padding: 15px 0 !important;
+            ul {
+                padding-left: 30px !important;
+            }
+            a {
+                padding-left: 30px !important;
+            }
+            i {
+                padding-right: 30px !important;
+            }
+        }
+    }
+    .deletables{
+        display: none !important;
+    }
+    .phone a{
+        font-size: 12px !important;
     }
 
 }

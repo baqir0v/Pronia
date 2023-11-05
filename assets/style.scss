@@ -90,10 +90,14 @@ body {
     background-color: white;
     width: 100%;
     height: 20vh;
-    // position: sticky;
+    position: sticky;
     top: 0;
     z-index: 1;
-    // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#navopener {
+    cursor: pointer;
 }
 
 .navtop {
@@ -166,7 +170,8 @@ body {
     .fa-users {
         cursor: pointer;
     }
-    .fa-bars{
+
+    .fa-bars {
         display: none;
     }
 }
@@ -374,7 +379,7 @@ body {
                 justify-content: center;
                 align-items: center;
 
-                
+
             }
         }
     }
@@ -510,7 +515,7 @@ body {
         max-width: 100%;
         padding-top: 100px;
         display: grid;
-        
+
         justify-items: center;
         gap: 20px;
         grid-template-columns: auto auto auto auto;
@@ -1343,32 +1348,36 @@ body {
     height: 100%;
     background-color: #333333;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    #exitdiv{
+
+    #exitdiv {
         position: relative;
         width: 100%;
-        height: 10%;        
+        height: 10%;
     }
-    #exit{
+
+    #exit {
         position: absolute;
         color: white;
         top: 0;
         right: 30px;
     }
-    #exit:hover{
+
+    #exit:hover {
         cursor: pointer;
     }
+
     .sidenavbarbox {
         width: 100%;
         height: 70%;
         background-color: #333333;
         display: flex;
         flex-direction: column;
-        // justify-content: space-evenly;
+        justify-content: space-evenly;
         gap: 50px;
 
         .phone {
@@ -1459,7 +1468,155 @@ body {
 }
 
 // Sidebar :end
+// Search :start
+#search {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    #x {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .fa-x {
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .searchbox {
+        width: 60%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 10px;
+
+        span{
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            background-color: #ABD373;
+        }
+        input {
+            height: 150px;
+            width: 100%;
+            font-size: 70px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-bottom: 2px solid white;
+            outline: none;
+
+        }
+
+        .fa-magnifying-glass {
+            position: absolute;
+            right: 20px;
+            bottom: 65px;
+            color: white;
+            font-size: 70px;
+        }
+    }
+}
+// Search :end
+// Shoppingcart :start
+.shoppingcart{
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 26%;
+    height: 100%;
+    background-color: white;
+    .shoppingcartbox{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .shoppingcarthead{
+            padding-left: 20px;
+        position: relative;
+        color: #525252;
+            display: flex;
+            h4{
+                font-size: 36px;
+            }
+            .fa-x{
+                position: absolute;
+                right: 0;
+                font-size: 36px;
+            }
+        }
+        .shopbox{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .shopboxes{
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                .shopright{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    a{
+                        color: #525252;
+                        font-size: 20px;
+                    }
+                }
+                
+            }
+        }
+        .subtotal{
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            color: #525252;
+            font-size: 25px;
+        }
+        button{
+            border: none;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto; 
+            width: 75%;
+            height: 40px;
+            background-color: #000;
+            color: white;
+            transition: 0.2s;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #ABD373;
+            transition: 0.2s;
+        }
+        .Checkout{
+            margin-bottom: 60px;
+        }
+    }
+    #shopx{
+        cursor: pointer;
+    }
+}
+// Shoppingcart :end
+
+
 .active {
     display: flex !important;
 }
-

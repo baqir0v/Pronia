@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   #movingimage {
     height: 55%;
     width: 80%;
@@ -8,6 +8,12 @@
   }
   .brandboxes #img4 {
     display: none;
+  }
+  .phone a {
+    font-size: 18px !important;
+  }
+  .language li {
+    font-size: 12px !important;
   }
 }
 @media screen and (max-width: 991px) {
@@ -75,6 +81,24 @@
   }
   .navright .fa-bars {
     display: block !important;
+  }
+  .accordions .accli {
+    padding: 15px 0 !important;
+  }
+  .accordions .accli ul {
+    padding-left: 30px !important;
+  }
+  .accordions .accli a {
+    padding-left: 30px !important;
+  }
+  .accordions .accli i {
+    padding-right: 30px !important;
+  }
+  .deletables {
+    display: none !important;
+  }
+  .phone a {
+    font-size: 12px !important;
   }
 }
 * {
@@ -160,8 +184,14 @@ body {
   background-color: white;
   width: 100%;
   height: 20vh;
+  position: sticky;
   top: 0;
   z-index: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#navopener {
+  cursor: pointer;
 }
 
 .navtop {
@@ -1191,7 +1221,7 @@ body {
   height: 100%;
   background-color: #333333;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   display: none;
   justify-content: center;
   align-items: center;
@@ -1217,6 +1247,7 @@ body {
   background-color: #333333;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   gap: 50px;
 }
 #sidenavbar .sidenavbarbox .phone {
@@ -1286,6 +1317,144 @@ body {
   padding-right: 60px;
 }
 #sidenavbar .sidenavbarbox .accordions .accli:hover {
+  cursor: pointer;
+}
+
+#search {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#search #x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#search .fa-x {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+#search .searchbox {
+  width: 60%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+}
+#search .searchbox span {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background-color: #ABD373;
+}
+#search .searchbox input {
+  height: 150px;
+  width: 100%;
+  font-size: 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-bottom: 2px solid white;
+  outline: none;
+}
+#search .searchbox .fa-magnifying-glass {
+  position: absolute;
+  right: 20px;
+  bottom: 65px;
+  color: white;
+  font-size: 70px;
+}
+
+.shoppingcart {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 26%;
+  height: 100%;
+  background-color: white;
+}
+.shoppingcart .shoppingcartbox {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shoppingcart .shoppingcartbox .shoppingcarthead {
+  padding-left: 20px;
+  position: relative;
+  color: #525252;
+  display: flex;
+}
+.shoppingcart .shoppingcartbox .shoppingcarthead h4 {
+  font-size: 36px;
+}
+.shoppingcart .shoppingcartbox .shoppingcarthead .fa-x {
+  position: absolute;
+  right: 0;
+  font-size: 36px;
+}
+.shoppingcart .shoppingcartbox .shopbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.shoppingcart .shoppingcartbox .shopbox .shopboxes {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+.shoppingcart .shoppingcartbox .shopbox .shopboxes .shopright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.shoppingcart .shoppingcartbox .shopbox .shopboxes .shopright a {
+  color: #525252;
+  font-size: 20px;
+}
+.shoppingcart .shoppingcartbox .subtotal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  color: #525252;
+  font-size: 25px;
+}
+.shoppingcart .shoppingcartbox button {
+  border: none;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 40px;
+  background-color: #000;
+  color: white;
+  transition: 0.2s;
+}
+.shoppingcart .shoppingcartbox button:hover {
+  cursor: pointer;
+  background-color: #ABD373;
+  transition: 0.2s;
+}
+.shoppingcart .shoppingcartbox .Checkout {
+  margin-bottom: 60px;
+}
+.shoppingcart #shopx {
   cursor: pointer;
 }
 

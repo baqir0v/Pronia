@@ -407,7 +407,7 @@ body {
         width: 90%;
         display: flex;
         justify-content: space-between;
-       
+
         .shippingboxes {
             width: 25%;
             border: 1px dashed #abd373;
@@ -898,6 +898,14 @@ body {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    #bgimg {
+        width: 95%;
+        height: 60%;
+
+        position: absolute;
+    }
 
     .clienttop {
         width: 40%;
@@ -962,6 +970,7 @@ body {
             justify-content: space-evenly;
             color: #525252;
             border-radius: 30px;
+            background-color: white;
 
             .testimonial {
                 border-top-right-radius: 30px;
@@ -1140,6 +1149,7 @@ body {
                 }
 
                 .links {
+                    cursor: pointer;
                     position: absolute;
                     left: 40px;
                     bottom: 40px;
@@ -1357,15 +1367,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    #englishopen{
+
+    #englishopen {
         display: none;
         flex-direction: column;
     }
-    #groupopen{
+
+    #groupopen {
         display: none;
         flex-direction: column;
     }
-    #usdopen{
+
+    #usdopen {
         display: none;
         flex-direction: column;
     }
@@ -1428,7 +1441,7 @@ body {
             justify-content: center;
             align-items: center;
 
-            
+
             ul {
                 width: 80%;
 
@@ -1440,7 +1453,7 @@ body {
                     color: white;
                     cursor: pointer;
 
-                    a{
+                    a {
                         color: white;
                     }
 
@@ -1535,7 +1548,7 @@ body {
             height: 150px;
             width: 100%;
             font-size: 70px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.2);
             color: white;
             border-bottom: 2px solid white;
             outline: none;
@@ -1547,7 +1560,7 @@ body {
             right: 20px;
             bottom: 65px;
             color: white;
-            font-size: 70px;
+            font-size: 80px;
         }
     }
 }
@@ -1590,7 +1603,7 @@ body {
         }
 
         .shopbox {
-            
+
             display: grid;
             grid-template-columns: auto auto;
 
@@ -1624,7 +1637,8 @@ body {
             color: #525252;
             font-size: 25px;
         }
-        .buttons{
+
+        .buttons {
             display: flex;
             flex-direction: column;
             height: 100px;
@@ -1662,14 +1676,40 @@ body {
 
 // Shoppingcart :end
 .product-card.newcard {
-    
+
     display: flex;
     flex-direction: column;
-    width: calc(50% - 10px); 
+    width: calc(50% - 10px);
     margin: 5px;
+
     img {
         max-width: 150px;
         overflow: hidden;
+    }
+}
+
+#scroll {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    i {
+        color: white;
     }
 }
 

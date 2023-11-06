@@ -30,7 +30,15 @@ body.addEventListener("mousemove", function (e) {
 })
 
 
+const scrollUpButton = document.getElementById('scroll');
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollUpButton.classList.add("active")
+    } else {
+        scrollUpButton.classList.remove("active")
+    }
+});
 
 // Accordions
 let accli1 = document.getElementById("accli1")

@@ -911,6 +911,12 @@ body {
   height: 80vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.clients #bgimg {
+  width: 95%;
+  height: 60%;
+  position: absolute;
 }
 .clients .clienttop {
   width: 40%;
@@ -967,6 +973,7 @@ body {
   justify-content: space-evenly;
   color: #525252;
   border-radius: 30px;
+  background-color: white;
 }
 .clients .clientbottom .clientboxes .testimonial {
   border-top-right-radius: 30px;
@@ -1114,6 +1121,7 @@ body {
   font-size: 18px;
 }
 .latest .latestbottom .latestbox .latestboxes .links {
+  cursor: pointer;
   position: absolute;
   left: 40px;
   bottom: 40px;
@@ -1440,7 +1448,7 @@ body {
   height: 150px;
   width: 100%;
   font-size: 70px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   border-bottom: 2px solid white;
   outline: none;
@@ -1450,7 +1458,7 @@ body {
   right: 20px;
   bottom: 65px;
   color: white;
-  font-size: 70px;
+  font-size: 80px;
 }
 
 .shoppingcart {
@@ -1553,6 +1561,29 @@ body {
 .product-card.newcard img {
   max-width: 150px;
   overflow: hidden;
+}
+
+#scroll {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#scroll a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#scroll i {
+  color: white;
 }
 
 .active {

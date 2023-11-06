@@ -19,12 +19,42 @@
     .language li{
         font-size: 12px !important;
     }
+    .latestboxes{
+        width: auto !important;
+    }
+    #latestbox3{
+        display: none;
+
+    }
+   #footer{
+    height: auto !important;
+    .footertop{
+        justify-content: center !important;
+        .footerleft{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footerright{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footermid{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+   }
 
   
 
 }
 
 @media screen and (max-width: 991px) {
+    
+    .latestboxes{
+        width: auto !important;
+    }
+    
     .discoverbox {
         flex-direction: column-reverse;
     }
@@ -71,7 +101,7 @@
             display: none;
         }
     }
-    #latestbox3{
+    #latestbox2{
         display: none;
     }
     .latestbox{

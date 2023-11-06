@@ -75,6 +75,9 @@ const newProducts = [
         price: 45
     }
 ]
+let basket =[]
+const openBasket = document.querySelectorAll(".fa-eye")
+const basketButtons = document.querySelectorAll(".fa-cart-shopping");
 const flowers = document.getElementById("flowers");
 const newflowers = document.getElementById("newProducts");
 
@@ -85,7 +88,8 @@ function createProductCard(product) {
         <img src="${product.image}" alt="">
         <div class="product-basket">
             <i class="fa-regular fa-heart" style="color: #000000; width: 30px; height: 30px; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 7px;"></i>
-            <i class="fa-regular fa-eye" style="color: #000000; width: 30px; height: 30px; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 7px;"></i>
+                <i  class="fa-regular fa-eye" style="color: #000000; width: 30px; height: 30px; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 7px;"></i>
+           
             <i class="fa-solid fa-cart-shopping" style="color: #000000; width: 30px; height: 30px; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 7px;"></i>
         </div>
         <div class="product-info">
@@ -99,6 +103,16 @@ function createProductCard(product) {
                 <i class="fa-solid fa-star" style="color: #ffe24d;"></i>
             </div>
         </div>`;
+
+        productCard.querySelector(".fa-cart-shopping").onclick = ()=>{
+            console.log(product.title);
+            
+                
+            }
+            productCard.querySelectorAll(".fa-cart-shopping").forEach(button =>{
+                
+            })
+        
     return productCard;
 }
 
@@ -111,3 +125,57 @@ newProducts.forEach(product => {
     const productCard = createProductCard(product);
     newflowers.appendChild(productCard);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+openBasket.forEach(button => {
+    button.addEventListener("click", function () {
+        const shoppingcart = document.getElementById("shoppingcart")
+        shoppingcart.classList.toggle("active")
+
+    });
+});
+
+// function createCard(product) {
+//     console.log(product);
+//     const productCard = document.createElement("div")
+//     productCard.classList.add("product-card")
+//     productCard.innerHTML = `
+//     <img src="${product.image}" alt="">
+//     <li class="product-info">
+//         <a href="#">${product.title}</a>
+//         <span>$${product.price}.00</span>
+        
+//     </li>`
+
+    
+// }
+// basketButtons.forEach(button => {
+//     button.addEventListener("click", function (product) {
+//         const productCard = createCard(product);
+//         const shopbox = document.getElementById("shopbox")
+//         shopbox.append(productCard)
+
+
+//     });
+// });
+
+
+
+
+
+
+
+

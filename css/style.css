@@ -39,8 +39,42 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .pbuttons {
+    width: 100px !important;
+    height: 50px !important;
+    font-size: 18px !important;
+  }
+  .bannerbox button {
+    width: 100px !important;
+    height: 40px !important;
+  }
 }
 @media screen and (max-width: 991px) {
+  .bannerbox button {
+    width: 80px !important;
+    height: 30px !important;
+  }
+  #clientbox3 {
+    display: none;
+  }
+  .clientboxes .testimonial {
+    width: 90px !important;
+  }
+  #shippingbox3 {
+    display: none;
+  }
+  .product {
+    padding-top: 50px;
+  }
+  .product .pbuttons {
+    width: 80px !important;
+    height: 40px !important;
+    font-size: 15px !important;
+  }
+  .shippingboxes {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .latestboxes {
     width: auto !important;
   }
@@ -93,6 +127,7 @@
   }
   .footertop {
     flex-direction: column;
+    gap: 50px;
   }
   #footer {
     height: auto !important;
@@ -923,7 +958,7 @@ body {
 .clients .clientbottom .clientboxes {
   position: relative;
   border: 1px solid black;
-  width: 30%;
+  max-width: 30%;
   height: 65%;
   padding-left: 20px;
   padding-right: 20px;
@@ -1256,6 +1291,18 @@ body {
   align-items: center;
   flex-direction: column;
 }
+#sidenavbar #englishopen {
+  display: none;
+  flex-direction: column;
+}
+#sidenavbar #groupopen {
+  display: none;
+  flex-direction: column;
+}
+#sidenavbar #usdopen {
+  display: none;
+  flex-direction: column;
+}
 #sidenavbar #exitdiv {
   position: relative;
   width: 100%;
@@ -1313,6 +1360,10 @@ body {
   align-items: center;
 }
 #sidenavbar .sidenavbarbox .language ul li {
+  color: white;
+  cursor: pointer;
+}
+#sidenavbar .sidenavbarbox .language ul li a {
   color: white;
 }
 #sidenavbar .sidenavbarbox .accordions {

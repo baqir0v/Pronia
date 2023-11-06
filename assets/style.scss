@@ -407,7 +407,7 @@ body {
         width: 90%;
         display: flex;
         justify-content: space-between;
-
+       
         .shippingboxes {
             width: 25%;
             border: 1px dashed #abd373;
@@ -826,6 +826,7 @@ body {
             h2 {
                 color: white;
                 background-color: #abd373;
+
             }
         }
     }
@@ -952,7 +953,7 @@ body {
         .clientboxes {
             position: relative;
             border: 1px solid black;
-            width: 30%;
+            max-width: 30%;
             height: 65%;
             padding-left: 20px;
             padding-right: 20px;
@@ -1356,6 +1357,20 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    #englishopen{
+        display: none;
+        flex-direction: column;
+    }
+    #groupopen{
+        display: none;
+        flex-direction: column;
+    }
+    #usdopen{
+        display: none;
+        flex-direction: column;
+    }
+
+
 
     #exitdiv {
         position: relative;
@@ -1413,7 +1428,7 @@ body {
             justify-content: center;
             align-items: center;
 
-
+            
             ul {
                 width: 80%;
 
@@ -1423,6 +1438,11 @@ body {
 
                 li {
                     color: white;
+                    cursor: pointer;
+
+                    a{
+                        color: white;
+                    }
 
                 }
             }

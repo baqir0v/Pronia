@@ -90,3 +90,30 @@ shoppingopen.addEventListener("click",function(){
 shopx.addEventListener("click",function(){
     shoppingcart.classList.remove("active")
 })
+
+
+let english = document.getElementById("english")
+let englishopen = document.getElementById("englishopen")
+
+english.addEventListener("click",function(e){
+    e.preventDefault()
+    englishopen.classList.toggle("active")
+})
+
+
+let group = document.getElementById("group")
+let groupopen = document.getElementById("groupopen")
+
+group.addEventListener("click",function(e){
+    e.preventDefault()
+    groupopen.classList.toggle("active")
+})
+
+
+let usd = document.getElementById("usd")
+let usdopen = document.getElementById("usdopen")
+
+usd.addEventListener("click",function(e){
+    e.preventDefault()
+    usdopen.classList.toggle("active")
+})

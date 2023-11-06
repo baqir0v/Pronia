@@ -76,8 +76,6 @@ const newProducts = [
     }
 ]
 let basket =[]
-const openBasket = document.querySelectorAll(".fa-eye")
-const basketButtons = document.querySelectorAll(".fa-cart-shopping");
 const flowers = document.getElementById("flowers");
 const newflowers = document.getElementById("newProducts");
 
@@ -104,13 +102,17 @@ function createProductCard(product) {
             </div>
         </div>`;
 
-        productCard.querySelector(".fa-cart-shopping").onclick = ()=>{
-            console.log(product.title);
+        // productCard.querySelector(".fa-cart-shopping").onclick = ()=>{
+        //     console.log(product.title);
             
                 
-            }
+        //     }
             productCard.querySelectorAll(".fa-cart-shopping").forEach(button =>{
-                
+                productCard.querySelector(".fa-cart-shopping").onclick = ()=>{
+                    console.log(product.title);
+
+                }
+
             })
         
     return productCard;
@@ -138,7 +140,8 @@ newProducts.forEach(product => {
 
 
 
-
+const openBasket = document.querySelectorAll(".fa-eye")
+const basketButtons = document.querySelectorAll(".fa-cart-shopping");
 
 openBasket.forEach(button => {
     button.addEventListener("click", function () {

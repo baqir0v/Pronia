@@ -571,6 +571,8 @@ body {
 .product .product-card {
   cursor: pointer;
   position: relative;
+  max-width: 215px;
+  overflow: hidden;
 }
 .product .product-basket {
   position: absolute;
@@ -1407,7 +1409,7 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  width: 26%;
+  width: 40%;
   height: 100%;
   background-color: white;
 }
@@ -1433,9 +1435,8 @@ body {
   font-size: 36px;
 }
 .shoppingcart .shoppingcartbox .shopbox {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 .shoppingcart .shoppingcartbox .shopbox .shopboxes {
   margin-left: auto;
@@ -1462,6 +1463,13 @@ body {
   color: #525252;
   font-size: 25px;
 }
+.shoppingcart .shoppingcartbox .buttons {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
 .shoppingcart .shoppingcartbox button {
   border: none;
   border-radius: 10px;
@@ -1479,10 +1487,21 @@ body {
   transition: 0.2s;
 }
 .shoppingcart .shoppingcartbox .Checkout {
-  margin-bottom: 60px;
+  order: 1;
 }
 .shoppingcart #shopx {
   cursor: pointer;
+}
+
+.product-card.newcard {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+  margin: 5px;
+}
+.product-card.newcard img {
+  max-width: 150px;
+  overflow: hidden;
 }
 
 .active {

@@ -249,7 +249,7 @@ body {
         position: absolute;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         background-color: white;
-        
+
 
         a {
             color: #525252;
@@ -533,6 +533,8 @@ body {
     .product-card {
         cursor: pointer;
         position: relative;
+        max-width: 215px;
+        overflow: hidden;
     }
 
     .product-basket {
@@ -1502,12 +1504,13 @@ body {
         position: relative;
         gap: 10px;
 
-        span{
+        span {
             color: white;
             font-size: 30px;
             text-align: center;
             background-color: #ABD373;
         }
+
         input {
             height: 150px;
             width: 100%;
@@ -1528,61 +1531,71 @@ body {
         }
     }
 }
+
 // Search :end
 // Shoppingcart :start
-.shoppingcart{
+.shoppingcart {
     position: fixed;
     z-index: 2;
     right: 0;
     display: none;
     justify-content: center;
     align-items: center;
-    width: 26%;
+    width: 40%;
     height: 100%;
     background-color: white;
-    .shoppingcartbox{
+
+    .shoppingcartbox {
         width: 80%;
         height: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        .shoppingcarthead{
+
+        .shoppingcarthead {
             padding-left: 20px;
-        position: relative;
-        color: #525252;
+            position: relative;
+            color: #525252;
             display: flex;
-            h4{
+
+            h4 {
                 font-size: 36px;
             }
-            .fa-x{
+
+            .fa-x {
                 position: absolute;
                 right: 0;
                 font-size: 36px;
             }
         }
-        .shopbox{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            .shopboxes{
+
+        .shopbox {
+            
+            display: grid;
+            grid-template-columns: auto auto;
+
+            .shopboxes {
                 margin-left: auto;
                 margin-right: auto;
                 display: flex;
                 width: 70%;
                 justify-content: space-between;
-                .shopright{
+
+                .shopright {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
-                    a{
+
+                    a {
                         color: #525252;
                         font-size: 20px;
                     }
                 }
-                
+
             }
         }
-        .subtotal{
+
+        .subtotal {
             margin-left: auto;
             margin-right: auto;
             width: 70%;
@@ -1591,31 +1604,54 @@ body {
             color: #525252;
             font-size: 25px;
         }
-        button{
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
             border: none;
             border-radius: 10px;
             margin-left: auto;
-            margin-right: auto; 
+            margin-right: auto;
             width: 75%;
             height: 40px;
             background-color: #000;
             color: white;
             transition: 0.2s;
         }
-        button:hover{
+
+        button:hover {
             cursor: pointer;
             background-color: #ABD373;
             transition: 0.2s;
         }
-        .Checkout{
-            margin-bottom: 60px;
+
+        .Checkout {
+            order: 1;
         }
     }
-    #shopx{
+
+    #shopx {
         cursor: pointer;
     }
 }
+
 // Shoppingcart :end
+.product-card.newcard {
+    
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px); 
+    margin: 5px;
+    img {
+        max-width: 150px;
+        overflow: hidden;
+    }
+}
 
 
 .active {
